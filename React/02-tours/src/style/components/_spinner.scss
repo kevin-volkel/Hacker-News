@@ -16,13 +16,13 @@
       // transform: rotate(180deg);
       transform: rotate3d(2, 0, 0, 180deg) rotate(360deg);
       border-top-color: $clr-secondary-4;
-      width: 175px;
+      // width: 175px;
     }
     100%{
       // transform: rotate(360deg);
       transform: rotate3d(0, 0, 0, 360deg) rotate(720deg);
       border-top-color: $clr-primary-4;
-      width: 200px;
+      // width: 200px;
     }
   }
 }
