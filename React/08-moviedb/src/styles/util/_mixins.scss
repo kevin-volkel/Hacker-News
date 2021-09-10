@@ -52,6 +52,24 @@
     flex-direction: column;
 }
 
+@mixin flex-space-bet{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-space-ar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin flex-space-even{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 //this is when we use after and before
 @mixin pseudo(
     $width: 100%, 
@@ -118,6 +136,11 @@ $desktop-wide: 1440px;
 
 @mixin phone {
     @media only screen and (min-width: $phone){
+        @content;
+    }
+}
+@mixin phablet {
+    @media only screen and (min-width: $phablet){
         @content;
     }
 }
