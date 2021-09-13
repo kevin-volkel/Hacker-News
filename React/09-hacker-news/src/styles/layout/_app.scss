@@ -2,7 +2,6 @@
 @use '../util/variables' as *;
 @use '../util/mixins' as *;
 
-
 .section {
   width: 90vw;
   margin: 0 auto;
@@ -11,41 +10,22 @@
 }
 
 @include large {
-  .section{
+  .section {
     width: 95vw;
   }
 }
 
-.container{
+.news {
+  width: 80vw;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 2rem;
   @include center-auto;
-  flex-direction: column;
-  width: 90vw;
-  max-width: 900px;
-  background: $clr-white;
-  border-radius: $radius;
-  padding: 2.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-
-  h3{
-    @include center-auto;
-    font-weight: bold;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-  }
-  .questions{
-    @include center-auto;
-    @include flex-center-column;
-    width: 60vw;
-    max-width: 600px;
-    gap: 1rem;
-  }
 }
 
-@include large{
-  .container{
-    flex-direction: row;
+@include large {
+  .news {
+    grid-template-columns: 40vw 40vw;
   }
 }

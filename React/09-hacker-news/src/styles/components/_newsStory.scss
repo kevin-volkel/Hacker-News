@@ -1,0 +1,28 @@
+@use '../themes/defaultTheme' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.news-story{
+  @include flex-column;
+  @include box(100%, auto);
+  position: relative;
+  padding: 1rem;
+  background: $clr-white;
+  border-radius: $radius;
+  margin: 3rem 1rem;
+  .title{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .info{
+    font-size: 1.1rem;
+    margin-bottom:2rem;
+  }
+  .url{
+    text-decoration: none;
+    color: $clr-black;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+  }
+}
