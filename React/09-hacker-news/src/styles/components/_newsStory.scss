@@ -9,6 +9,7 @@
   padding: 1rem;
   background: $clr-white;
   border-radius: $radius;
+  box-shadow: $dark-shadow;
   margin: 3rem 1rem;
   .title{
     font-size: 1.2rem;
@@ -21,8 +22,24 @@
   .url{
     text-decoration: none;
     color: $clr-black;
+  }
+  .button-container{
     position: absolute;
     bottom: 5px;
-    left: 5px;
+    width: 100%;
+    button{
+      margin-left: 40%;
+      color: $clr-red-dark;
+    }
+  }
+}
+
+@include tablet{
+  .news-story{
+    .button-container{
+      button{
+        margin-left: 75%;
+      }
+    }
   }
 }

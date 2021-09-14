@@ -13,13 +13,13 @@
     width: 100%;
     border: transparent;
     max-width: $fixed-width;
-    background: $clr-white;
     padding: 1rem;
     font-size: 1rem;
-    border-radius: $radius;
+    border-bottom: 2px solid $clr-black;
+    outline: none;
     color: $clr-grey-3;
     letter-spacing: $spacing;
-    margin-top: 1rem;
+    text-transform: uppercase;
   }
   .error{
     color: $clr-red-dark;

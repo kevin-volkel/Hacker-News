@@ -24,7 +24,7 @@
   @include center-auto;
 }
 
-@include large {
+@include tablet {
   .news {
     grid-template-columns: 40vw 40vw;
   }

@@ -276,7 +276,7 @@ body {
   margin-right: auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .news {
     grid-template-columns: 40vw 40vw;
   }
@@ -290,6 +290,7 @@ body {
   padding: 1rem;
   background: #fff;
   border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   margin: 3rem 1rem;
 }
 .news-story .title {
@@ -303,11 +304,22 @@ body {
 .news-story .url {
   text-decoration: none;
   color: #222;
+}
+.news-story .button-container {
   position: absolute;
   bottom: 5px;
-  left: 5px;
+  width: 100%;
+}
+.news-story .button-container button {
+  margin-left: 40%;
+  color: #ca1616;
 }
 
+@media only screen and (min-width: 768px) {
+  .news-story .button-container button {
+    margin-left: 75%;
+  }
+}
 .search-form {
   width: 90vw;
   max-width: 1170px;
@@ -319,13 +331,13 @@ body {
   width: 100%;
   border: transparent;
   max-width: 620px;
-  background: #fff;
   padding: 1rem;
   font-size: 1rem;
-  border-radius: 0.25rem;
+  border-bottom: 2px solid #222;
+  outline: none;
   color: #5c738a;
   letter-spacing: 0.1rem;
-  margin-top: 1rem;
+  text-transform: uppercase;
 }
 .search-form .error {
   color: #ca1616;
@@ -334,6 +346,64 @@ body {
   letter-spacing: 0.1rem;
 }
 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15rem;
+  align-items: center;
+}
+.pagination .arrow {
+  width: 2rem;
+  height: 1.1rem;
+}
+.pagination .arrow:hover {
+  cursor: pointer;
+}
+.pagination p {
+  margin: 0;
+}
+.pagination .pages {
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagination .pages input {
+  width: 1.5rem;
+  text-align: center;
+  outline: none;
+  border-bottom: 2px #222 solid;
+  margin: 0 1rem;
+}
+
+.spinner h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.spinner div {
+  width: 20rem;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border-top: 2px solid #265e97;
+  animation: spinning 2s linear infinite;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .single-movie {
   width: 90vw;
   max-width: 1170px;

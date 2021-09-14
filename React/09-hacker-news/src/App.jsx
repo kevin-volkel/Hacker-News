@@ -2,20 +2,25 @@ import React from "react";
 import NewsStory from "./Components/NewsStory";
 import Pagination from "./Components/Pagination";
 import SearchForm from "./Components/SearchForm";
+import Spinner from "./Components/Spinner";
 import { useNewsContext } from "./util/context";
-  
+
 const App = () => {
-  const { hits } = useNewsContext();
+  const { hits, loading } = useNewsContext();
 
   return (
     <>
       <SearchForm />
       <Pagination />
-      <div className="news">
-        {hits.map((hit) => {
-          return <NewsStory key = {hit.created_at} {...hit} />;
-        })}
-      </div>
+      {loading ? (
+        <Spinner/>
+      ) : (
+        <div className="news">
+          {hits.map((hit) => {
+            return <NewsStory key={hit.created_at_i} {...hit} id = {hit.created_at_i}/>;
+          })}
+        </div>
+      )}
     </>
   );
 };

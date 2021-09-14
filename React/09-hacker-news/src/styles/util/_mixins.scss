@@ -52,19 +52,19 @@
     flex-direction: column;
 }
 
-@mixin flex-space-bet{
+@mixin flex-between{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-@mixin flex-space-ar{
+@mixin flex-around{
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-@mixin flex-space-even{
+@mixin flex-even{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
