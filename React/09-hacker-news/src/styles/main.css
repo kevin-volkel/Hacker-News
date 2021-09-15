@@ -296,14 +296,20 @@ body {
 .news-story .title {
   font-size: 1.2rem;
   font-weight: 500;
+  color: #2e73b8;
 }
 .news-story .info {
   font-size: 1.1rem;
   margin-bottom: 2rem;
+  color: #3b85ce;
 }
 .news-story .url {
   text-decoration: none;
-  color: #222;
+  color: #5c738a;
+  transition: 0.1s linear all;
+}
+.news-story .url:hover {
+  color: #2c4a68;
 }
 .news-story .button-container {
   position: absolute;
@@ -335,7 +341,7 @@ body {
   font-size: 1rem;
   border-bottom: 2px solid #222;
   outline: none;
-  color: #5c738a;
+  color: #afbdca;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
@@ -375,8 +381,9 @@ body {
   width: 1.5rem;
   text-align: center;
   outline: none;
-  border-bottom: 2px #222 solid;
+  border-bottom: 1px #b1cfec solid;
   margin: 0 1rem;
+  color: #b1cfec;
 }
 
 .spinner h3 {

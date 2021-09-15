@@ -14,14 +14,21 @@
   .title{
     font-size: 1.2rem;
     font-weight: 500;
+    color: $clr-primary-3;
   }
   .info{
     font-size: 1.1rem;
     margin-bottom:2rem;
+    color: $clr-primary-4;
   }
   .url{
     text-decoration: none;
-    color: $clr-black;
+    color: $clr-grey-3;
+    transition: 0.1s linear all;
+
+    &:hover{
+      color: $clr-grey-1;
+    }
   }
   .button-container{
     position: absolute;
